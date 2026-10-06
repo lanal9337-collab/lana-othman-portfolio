@@ -1,40 +1,81 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Page 01 — Lana Othman</title>
+<title>Lana Othman — Project 04</title>
 <link rel="stylesheet" href="style.css">
 
 <style>
-.sub{
-  min-height:100vh;
-  padding:120px var(--pad) 70px;
+.project-page{background:#050505;color:#f4f4f0;min-height:100vh}
+.project-nav{position:fixed;top:0;left:0;right:0;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;border-bottom:1px solid #252525;background:rgba(5,5,5,.92);backdrop-filter:blur(14px);z-index:20}
+.project-nav a{color:#f4f4f0;text-decoration:none;text-transform:uppercase;font-size:12px;letter-spacing:.12em}
+.project-logo{font-size:24px;font-weight:800;letter-spacing:-.08em}
+.project-logo span{color:#b7e600}
+.project-main{padding:76px 4vw 0}
+.project-intro{min-height:70vh;display:flex;flex-direction:column;justify-content:flex-end;padding:8vw 0 7vw}
+.project-number{color:#b7e600;font-size:12px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:30px}
+.project-intro h1{font-size:clamp(64px,12vw,180px);line-height:.82;letter-spacing:-.07em;margin:0}
+.project-intro h1 i{font-weight:300}
+.project-info{display:grid;grid-template-columns:1fr 1fr;gap:40px;border-top:1px solid #292929;padding-top:22px;margin-top:60px}
+.project-info p{margin:0;color:#92928d;font-size:14px;line-height:1.7}
+.project-info strong{display:block;color:#f4f4f0;font-size:12px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding-bottom:100px}
+.gallery img{display:block;width:100%;height:auto;transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .6s}
+.gallery a{display:block;overflow:hidden;background:#111}
+.gallery a:hover img{transform:scale(1.025);filter:brightness(1.08)}
+.gallery .wide{grid-column:1/-1}
+.project-footer{border-top:1px solid #292929;padding:60px 0 100px;display:flex;justify-content:space-between}
+.project-footer a{color:#f4f4f0;text-decoration:none;text-transform:uppercase;font-size:12px;letter-spacing:.12em}
+.project-footer a:hover{color:#b7e600}
+@media(max-width:700px){
+.project-nav{padding:0 20px}.project-main{padding-left:20px;padding-right:20px}
+.project-intro{min-height:65vh}.project-info{grid-template-columns:1fr}
+.gallery{grid-template-columns:1fr;gap:10px}.gallery .wide{grid-column:auto}
 }
-.sub-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.back{
-  color:var(--lime);
-  font-size:10px;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-}
-.page-no{
-  font-size:10px;
-  letter-spacing:.16em;
-  color:var(--muted);
-}
-.sub h1{
-  font-size:clamp(80px,15vw,210px);
-  line-height:.72;
-  letter-spacing:-.08em;
-  margin:90px 0 30px;
-}
-.sub h1 i{
-  font-style:normal;
+</style>
+</head>
+
+<body class="project-page">
+
+<header class="project-nav">
+<a href="index.html" class="project-logo">LO<span>©</span></a>
+<a href="index.html#work">Back to Work ↗</a>
+</header>
+
+<main class="project-main">
+
+<section class="project-intro">
+<div class="project-number">04 / Selected Project</div>
+<h1>Little<br><i>Clothes</i></h1>
+
+<div class="project-info">
+<div>
+<strong>Category</strong>
+<p>Packaging · Brand Visuals</p>
+</div>
+<div>
+<strong>Designer</strong>
+<p>Lana Othman · Ramallah, Palestine</p>
+</div>
+</div>
+</section>
+
+<section class="gallery">
+<a href="#"><img src="images/packaging/littles-clothes/littles-clothes-01.jpg" alt="Littles Clothes"></a>
+<a href="#"><img src="images/packaging/littles-clothes/littles-clothes-02.jpg" alt="Littles Clothes"></a>
+<a href="#" class="wide"><img src="images/packaging/littles-clothes/littles-clothes-03.jpg" alt="Littles Clothes"></a>
+<a href="#"><img src="images/packaging/littles-clothes/littles-clothes-04.jpg" alt="Littles Clothes"></a>
+</section>
+
+<footer class="project-footer">
+<a href="page-03.html">← Previous</a>
+<a href="page-05.html">Next Project →</a>
+</footer>
+
+</main>
+</body>
+</html>  font-style:normal;
   font-weight:250;
 }
 .sub-intro{
