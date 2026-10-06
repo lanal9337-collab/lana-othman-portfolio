@@ -1,3 +1,183 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Packaging — Lana Othman</title><link rel="stylesheet" href="style.css"><style>
-.sub{padding:120px var(--pad) 70px}.back{color:#b7e600;font-size:10px;letter-spacing:.16em;text-transform:uppercase}.sub h1{font-size:clamp(70px,13vw,180px);line-height:.75;letter-spacing:-.08em;margin:80px 0 25px}.sub>p{max-width:560px;color:var(--muted);font-size:16px;line-height:1.3}.project{margin-top:90px}.project h2{font-size:clamp(30px,5vw,64px);margin:0 0 20px;letter-spacing:-.04em}.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--line)}figure{margin:0;background:#090909;padding:14px}.ph{aspect-ratio:4/3;background:#151515;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#4a4a4a}.ph b{font-size:60px;color:#292929}.ph span{font-size:9px;letter-spacing:.16em}figcaption{padding-top:12px;color:var(--muted);font-size:10px;letter-spacing:.12em}@media(max-width:700px){.gallery{grid-template-columns:1fr}}
-</style></head><body><main class="sub"><a class="back" href="index.html">← Back to work</a><div class="section-no">SELECTED WORK</div><h1>Packaging</h1><p>Selected packaging and product presentation projects.</p><section class="project"><h2>Malmas</h2><div class="gallery"><figure><div class="ph"><b>01</b><span>ADD IMAGE</span></div><figcaption>images/packaging/malmas-01.jpg</figcaption></figure><figure><div class="ph"><b>02</b><span>ADD IMAGE</span></div><figcaption>images/packaging/malmas-02.jpg</figcaption></figure><figure><div class="ph"><b>03</b><span>ADD IMAGE</span></div><figcaption>images/packaging/malmas-03.jpg</figcaption></figure><figure><div class="ph"><b>04</b><span>ADD IMAGE</span></div><figcaption>images/packaging/malmas-04.jpg</figcaption></figure><figure><div class="ph"><b>05</b><span>ADD IMAGE</span></div><figcaption>images/packaging/malmas-05.jpg</figcaption></figure><figure><div class="ph"><b>06</b><span>ADD IMAGE</span></div><figcaption>images/packaging/malmas-06.jpg</figcaption></figure><figure><div class="ph"><b>07</b><span>ADD IMAGE</span></div><figcaption>images/packaging/malmas-07.jpg</figcaption></figure><figure><div class="ph"><b>08</b><span>ADD IMAGE</span></div><figcaption>images/packaging/malmas-08.jpg</figcaption></figure><figure><div class="ph"><b>09</b><span>ADD IMAGE</span></div><figcaption>images/packaging/malmas-09.jpg</figcaption></figure></div></section><section class="project"><h2>Littles Clothes</h2><div class="gallery"><figure><div class="ph"><b>01</b><span>ADD IMAGE</span></div><figcaption>images/packaging/littles-clothes-01.jpg</figcaption></figure><figure><div class="ph"><b>02</b><span>ADD IMAGE</span></div><figcaption>images/packaging/littles-clothes-02.jpg</figcaption></figure><figure><div class="ph"><b>03</b><span>ADD IMAGE</span></div><figcaption>images/packaging/littles-clothes-03.jpg</figcaption></figure><figure><div class="ph"><b>04</b><span>ADD IMAGE</span></div><figcaption>images/packaging/littles-clothes-04.jpg</figcaption></figure></div></section><section class="project"><h2>Beauty Touch</h2><div class="gallery"><figure><div class="ph"><b>01</b><span>ADD IMAGE</span></div><figcaption>images/packaging/beauty-touch-01.jpg</figcaption></figure><figure><div class="ph"><b>02</b><span>ADD IMAGE</span></div><figcaption>images/packaging/beauty-touch-02.jpg</figcaption></figure><figure><div class="ph"><b>03</b><span>ADD IMAGE</span></div><figcaption>images/packaging/beauty-touch-03.jpg</figcaption></figure><figure><div class="ph"><b>04</b><span>ADD IMAGE</span></div><figcaption>images/packaging/beauty-touch-04.jpg</figcaption></figure><figure><div class="ph"><b>05</b><span>ADD IMAGE</span></div><figcaption>images/packaging/beauty-touch-05.jpg</figcaption></figure></div></section></main></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Packaging — Lana Othman</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #f7f5ef;
+      color: #171717;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .sub {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 40px 30px 100px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 70px;
+      color: #171717;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .section-no {
+      font-size: 12px;
+      color: #77736b;
+      margin-bottom: 12px;
+      letter-spacing: .08em;
+    }
+
+    h1 {
+      font-size: clamp(60px, 10vw, 150px);
+      line-height: .9;
+      margin: 0 0 100px;
+      letter-spacing: -.06em;
+    }
+
+    .project {
+      margin-bottom: 140px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin: 0 0 30px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    figure img {
+      width: 100%;
+      display: block;
+    }
+
+    figcaption {
+      padding: 10px 0 0;
+      font-size: 12px;
+      color: #77736b;
+    }
+
+    @media (max-width: 700px) {
+      .sub { padding: 25px 18px 70px; }
+      .gallery { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="sub">
+
+  <a class="back" href="index.html">← Back to work</a>
+
+  <div class="section-no">SELECTED WORK</div>
+  <h1>Packaging</h1>
+
+
+  <!-- BEAUTY TOUCH -->
+
+  <section class="project">
+    <h2>Beauty Touch</h2>
+
+    <div class="gallery">
+
+      <figure>
+        <img src="images/packaging/beauty-touch/beauty-touch-01.jpg" alt="Beauty Touch packaging 01">
+        <figcaption>Beauty Touch — 01</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/packaging/beauty-touch/beauty-touch-02.jpg" alt="Beauty Touch packaging 02">
+        <figcaption>Beauty Touch — 02</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/packaging/beauty-touch/beauty-touch-03.jpg" alt="Beauty Touch packaging 03">
+        <figcaption>Beauty Touch — 03</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/packaging/beauty-touch/beauty-touch-04.jpg" alt="Beauty Touch packaging 04">
+        <figcaption>Beauty Touch — 04</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/packaging/beauty-touch/beauty-touch-05.jpg" alt="Beauty Touch packaging 05">
+        <figcaption>Beauty Touch — 05</figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+
+  <!-- LITTLES CLOTHES -->
+
+  <section class="project">
+    <h2>Littles Clothes</h2>
+
+    <div class="gallery">
+
+      <figure>
+        <img src="images/packaging/littles-clothes/littles-clothes-01.jpg" alt="Littles Clothes packaging 01">
+        <figcaption>Littles Clothes — 01</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/packaging/littles-clothes/littles-clothes-02.jpg" alt="Littles Clothes packaging 02">
+        <figcaption>Littles Clothes — 02</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/packaging/littles-clothes/littles-clothes-03.jpg" alt="Littles Clothes packaging 03">
+        <figcaption>Littles Clothes — 03</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/packaging/littles-clothes/littles-clothes-04.jpg" alt="Littles Clothes packaging 04">
+        <figcaption>Littles Clothes — 04</figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+
+  <!-- MALMAS -->
+
+  <section class="project">
+    <h2>Malmas</h2>
+
+    <div class="gallery">
+
+      <figure><img src="images/packaging/malmas/malmas-01.jpg" alt="Malmas packaging 01"><figcaption>Malmas — 01</figcaption></figure>
+      <figure><img src="images/packaging/malmas/malmas-02.jpg" alt="Malmas packaging 02"><figcaption>Malmas — 02</figcaption></figure>
+      <figure><img src="images/packaging/malmas/malmas-03.jpg" alt="Malmas packaging 03"><figcaption>Malmas — 03</figcaption></figure>
+      <figure><img src="images/packaging/malmas/malmas-04.jpg" alt="Malmas packaging 04"><figcaption>Malmas — 04</figcaption></figure>
+      <figure><img src="images/packaging/malmas/malmas-05.jpg" alt="Malmas packaging 05"><figcaption>Malmas — 05</figcaption></figure>
+      <figure><img src="images/packaging/malmas/malmas-06.jpg" alt="Malmas packaging 06"><figcaption>Malmas — 06</figcaption></figure>
+      <figure><img src="images/packaging/malmas/malmas-07.jpg" alt="Malmas packaging 07"><figcaption>Malmas — 07</figcaption></figure>
+      <figure><img src="images/packaging/malmas/malmas-08.jpg" alt="Malmas packaging 08"><figcaption>Malmas — 08</figcaption></figure>
+      <figure><img src="images/packaging/malmas/malmas-09.jpg" alt="Malmas packaging 09"><figcaption>Malmas — 09</figcaption></figure>
+
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
