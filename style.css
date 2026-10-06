@@ -669,3 +669,395 @@ line-height:2
 }
 
 }
+/* =========================================================
+   LANA OTHMAN — FINAL PORTFOLIO GALLERY OVERRIDE
+   Darker / Softer / More Editorial
+   ========================================================= */
+
+:root{
+  --bg:#030303;
+  --ink:#f2f2ed;
+  --muted:#777772;
+  --line:#242424;
+  --accent:#b7e600;
+}
+
+/* ---------- GLOBAL ---------- */
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#030303 !important;
+  color:#f2f2ed;
+}
+
+a{
+  -webkit-tap-highlight-color:transparent;
+}
+
+/* ---------- PROJECT PAGES ---------- */
+
+.project-page{
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(183,230,0,.035),
+      transparent 35%
+    ),
+    #030303 !important;
+  color:#f2f2ed !important;
+}
+
+/* darker fixed navigation */
+
+.project-nav{
+  background:rgba(0,0,0,.96) !important;
+  border-bottom:1px solid rgba(255,255,255,.08) !important;
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+}
+
+/* ---------- INTRO ---------- */
+
+.project-intro{
+  position:relative;
+}
+
+.project-intro h1{
+  color:#f2f2ed;
+}
+
+.project-number{
+  color:#b7e600 !important;
+  opacity:.8;
+}
+
+.project-info{
+  border-top:1px solid rgba(255,255,255,.10) !important;
+}
+
+.project-info strong{
+  color:#e8e8e3 !important;
+}
+
+.project-info p{
+  color:#686863 !important;
+}
+
+/* =========================================================
+   IMAGE GALLERY
+   ========================================================= */
+
+.gallery{
+  position:relative;
+  gap:18px !important;
+}
+
+/*
+  Every image becomes darker and slightly desaturated.
+  This is what makes completely different projects
+  visually belong to the same portfolio.
+*/
+
+.gallery a{
+  position:relative;
+  background:#050505 !important;
+  overflow:hidden;
+}
+
+/* dark glass layer */
+
+.gallery a::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.30) 0%,
+      rgba(0,0,0,.48) 55%,
+      rgba(0,0,0,.68) 100%
+    );
+  z-index:2;
+  pointer-events:none;
+  transition:
+    background .6s ease,
+    opacity .6s ease;
+}
+
+/* image itself */
+
+.gallery img{
+  position:relative;
+  z-index:1;
+  display:block;
+  width:100%;
+  height:auto;
+
+  filter:
+    brightness(.58)
+    saturate(.68)
+    contrast(1.04);
+
+  transform:scale(1.001);
+
+  transition:
+    transform .8s cubic-bezier(.2,.7,.2,1),
+    filter .8s cubic-bezier(.2,.7,.2,1);
+}
+
+/* hover */
+
+.gallery a:hover::after{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.08) 0%,
+      rgba(0,0,0,.18) 55%,
+      rgba(0,0,0,.32) 100%
+    );
+}
+
+.gallery a:hover img{
+  filter:
+    brightness(.86)
+    saturate(.88)
+    contrast(1.03);
+
+  transform:scale(1.035);
+}
+
+/* ---------- IMAGE CORNERS ---------- */
+
+.gallery a{
+  border-radius:2px;
+}
+
+/* ---------- WIDE IMAGES ---------- */
+
+.gallery .wide{
+  grid-column:1 / -1;
+}
+
+/* ---------- SPACING ---------- */
+
+.gallery{
+  padding-bottom:120px !important;
+}
+
+/* =========================================================
+   SOFT NUMBER / LABEL FEEL
+   ========================================================= */
+
+.project-footer{
+  border-top:1px solid rgba(255,255,255,.09) !important;
+}
+
+.project-footer a{
+  transition:
+    color .3s ease,
+    opacity .3s ease;
+}
+
+.project-footer a:hover{
+  color:#b7e600 !important;
+}
+
+/* =========================================================
+   HOMEPAGE PROJECT TILES
+   ========================================================= */
+
+.work-grid .tile{
+  position:relative;
+  overflow:hidden;
+}
+
+/* dark overlay on homepage project images */
+
+.work-grid .tile::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.24),
+      rgba(0,0,0,.58)
+    );
+
+  z-index:1;
+  pointer-events:none;
+
+  transition:
+    background .6s ease;
+}
+
+.work-grid .tile:hover::after{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.10),
+      rgba(0,0,0,.36)
+    );
+}
+
+/* make content stay above image */
+
+.work-grid .tile > *{
+  position:relative;
+  z-index:3;
+}
+
+/* =========================================================
+   HOMEPAGE IMAGE TREATMENT
+   ========================================================= */
+
+.work-grid .tile{
+  background:#070707 !important;
+}
+
+.work-grid .tile img,
+.work-grid .tile::before{
+  filter:
+    brightness(.58)
+    saturate(.65)
+    contrast(1.05);
+}
+
+/* =========================================================
+   IMAGE BACKGROUND TILES
+   ========================================================= */
+
+.tile.branding{
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,.48),
+      rgba(0,0,0,.72)
+    ),
+    url("images/branding/wink-co/wink-co-01.jpg") !important;
+}
+
+.tile.social{
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,.48),
+      rgba(0,0,0,.72)
+    ),
+    url("images/social/brava/brava-01.jpg") !important;
+}
+
+.tile.packaging{
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,.48),
+      rgba(0,0,0,.72)
+    ),
+    url("images/packaging/beauty-touch/beauty-touch-01.jpg") !important;
+}
+
+.tile.print{
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,.48),
+      rgba(0,0,0,.72)
+    ),
+    url("images/print/print-01.jpg") !important;
+}
+
+.tile.logo{
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,.48),
+      rgba(0,0,0,.72)
+    ),
+    url("images/logo/logo-01.jpg") !important;
+}
+
+.tile.art{
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,.48),
+      rgba(0,0,0,.72)
+    ),
+    url("images/art/art-01.jpg") !important;
+}
+
+/* =========================================================
+   HOMEPAGE TILE HOVER
+   ========================================================= */
+
+.work-grid .tile{
+  background-size:cover !important;
+  background-position:center !important;
+
+  transition:
+    transform .6s cubic-bezier(.2,.7,.2,1),
+    background-size .8s ease;
+}
+
+.work-grid .tile:hover{
+  transform:translateY(-4px);
+}
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+.project-page,
+.project-page h1,
+.project-page h2,
+.project-page h3,
+.project-page p,
+.project-page a{
+  font-family:Acumin,Inter,Arial,sans-serif;
+}
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection{
+  background:#b7e600;
+  color:#000;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:700px){
+
+  .gallery{
+    gap:10px !important;
+    padding-bottom:70px !important;
+  }
+
+  .gallery img{
+    filter:
+      brightness(.62)
+      saturate(.70)
+      contrast(1.03);
+  }
+
+  .gallery a::after{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0,0,0,.26),
+        rgba(0,0,0,.60)
+      );
+  }
+
+  .work-grid .tile::after{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0,0,0,.30),
+        rgba(0,0,0,.65)
+      );
+  }
+
+}
