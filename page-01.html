@@ -1,3 +1,173 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Social 01 — Lana Othman</title><link rel="stylesheet" href="style.css"><style>
-.sub{padding:120px var(--pad) 70px}.back{color:#dca6ff;font-size:10px;letter-spacing:.16em;text-transform:uppercase}.sub h1{font-size:clamp(80px,14vw,190px);line-height:.75;letter-spacing:-.08em;margin:80px 0 25px}.sub>p{max-width:430px;color:var(--muted)}.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--line);margin-top:60px}figure{margin:0;background:#090909;padding:14px}.ph{aspect-ratio:4/3;background:#151515;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#4a4a4a}.ph b{font-size:60px;color:#292929}.ph span{font-size:9px;letter-spacing:.16em}figcaption{padding-top:12px;color:var(--muted);font-size:10px;letter-spacing:.12em}@media(max-width:700px){.gallery{grid-template-columns:1fr}}
-</style></head><body><main class="sub"><a class="back" href="social-media.html">← Social Media Index</a><div class="section-no">02 / SOCIAL MEDIA</div><h1>Page 01</h1><p>Six image slots — ready for the selected project.</p><section class="gallery"><figure><div class="ph"><b>01</b><span>ADD IMAGE</span></div><figcaption>Social Media Design 01</figcaption></figure><figure><div class="ph"><b>02</b><span>ADD IMAGE</span></div><figcaption>Social Media Design 02</figcaption></figure><figure><div class="ph"><b>03</b><span>ADD IMAGE</span></div><figcaption>Social Media Design 03</figcaption></figure><figure><div class="ph"><b>04</b><span>ADD IMAGE</span></div><figcaption>Social Media Design 04</figcaption></figure><figure><div class="ph"><b>05</b><span>ADD IMAGE</span></div><figcaption>Social Media Design 05</figcaption></figure><figure><div class="ph"><b>06</b><span>ADD IMAGE</span></div><figcaption>Social Media Design 06</figcaption></figure></section></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Page 01 — Lana Othman</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.sub{
+  min-height:100vh;
+  padding:120px var(--pad) 70px;
+}
+.sub-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.back{
+  color:var(--lime);
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.page-no{
+  font-size:10px;
+  letter-spacing:.16em;
+  color:var(--muted);
+}
+.sub h1{
+  font-size:clamp(80px,15vw,210px);
+  line-height:.72;
+  letter-spacing:-.08em;
+  margin:90px 0 30px;
+}
+.sub h1 i{
+  font-style:normal;
+  font-weight:250;
+}
+.sub-intro{
+  max-width:500px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.4;
+}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:2px;
+  background:var(--line);
+  margin-top:70px;
+}
+.slot{
+  min-height:420px;
+  background:#090909;
+  padding:25px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  border-left:3px solid transparent;
+  transition:.35s ease;
+}
+.slot:hover{
+  background:#111;
+  border-left-color:var(--lime);
+  transform:translateY(-3px);
+}
+.slot-number{
+  color:var(--muted);
+  font-size:10px;
+  letter-spacing:.16em;
+}
+.slot-center{
+  text-align:center;
+}
+.slot-center strong{
+  display:block;
+  font-size:70px;
+  line-height:1;
+  color:#1d1d1d;
+  font-weight:800;
+}
+.slot-center span{
+  font-size:9px;
+  letter-spacing:.18em;
+  color:#555;
+}
+.slot-title{
+  font-size:11px;
+  letter-spacing:.12em;
+  color:var(--muted);
+  text-transform:uppercase;
+}
+.bottom-link{
+  display:block;
+  margin-top:60px;
+  color:var(--lime);
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+@media(max-width:700px){
+  .sub{padding-top:100px}
+  .gallery{grid-template-columns:1fr}
+  .slot{min-height:320px}
+}
+</style>
+</head>
+
+<body>
+
+<main class="sub">
+
+<div class="sub-top">
+<a class="back" href="social-media.html">← Social Media</a>
+<span class="page-no">01 / 06</span>
+</div>
+
+<div class="section-no">02 / SOCIAL MEDIA</div>
+
+<h1>Page <i>01</i></h1>
+
+<p class="sub-intro">
+A selected visual design project by Lana Othman. 
+Digital campaigns, social content and visual communication.
+</p>
+
+<section class="gallery">
+
+<div class="slot">
+<span class="slot-number">01</span>
+<div class="slot-center"><strong>01</strong><span>PROJECT IMAGE</span></div>
+<span class="slot-title">Social Media Design 01</span>
+</div>
+
+<div class="slot">
+<span class="slot-number">02</span>
+<div class="slot-center"><strong>02</strong><span>PROJECT IMAGE</span></div>
+<span class="slot-title">Social Media Design 02</span>
+</div>
+
+<div class="slot">
+<span class="slot-number">03</span>
+<div class="slot-center"><strong>03</strong><span>PROJECT IMAGE</span></div>
+<span class="slot-title">Social Media Design 03</span>
+</div>
+
+<div class="slot">
+<span class="slot-number">04</span>
+<div class="slot-center"><strong>04</strong><span>PROJECT IMAGE</span></div>
+<span class="slot-title">Social Media Design 04</span>
+</div>
+
+<div class="slot">
+<span class="slot-number">05</span>
+<div class="slot-center"><strong>05</strong><span>PROJECT IMAGE</span></div>
+<span class="slot-title">Social Media Design 05</span>
+</div>
+
+<div class="slot">
+<span class="slot-number">06</span>
+<div class="slot-center"><strong>06</strong><span>PROJECT IMAGE</span></div>
+<span class="slot-title">Social Media Design 06</span>
+</div>
+
+</section>
+
+<a class="bottom-link" href="social-media.html">← Back to Social Media</a>
+
+</main>
+
+</body>
+</html>
