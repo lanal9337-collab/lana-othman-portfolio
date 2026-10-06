@@ -1,40 +1,609 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Media — Lana Othman</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * { box-sizing: border-box; }
+<title>Social Media — Lana Othman</title>
 
-    body {
-      margin: 0;
-      background: #f7f5ef;
-      color: #171717;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<style>
+@font-face{
+  font-family:Acumin;
+  src:local("Acumin Variable Concept");
+  font-weight:100 900;
+}
 
-    .sub {
-      max-width: 1440px;
-      margin: auto;
-      padding: 40px 30px 100px;
-    }
+:root{
+  --bg:#050505;
+  --fg:#f4f4f0;
+  --muted:#92928d;
+  --line:#252525;
+  --lime:#b7e600;
+  --pad:clamp(22px,5vw,78px);
+}
 
-    .back {
-      display: inline-block;
-      margin-bottom: 70px;
-      color: #171717;
-      text-decoration: none;
-      font-size: 14px;
-    }
+*{box-sizing:border-box}
 
-    .section-no {
-      font-size: 12px;
-      color: #77736b;
-      margin-bottom: 12px;
-      letter-spacing: .08em;
-    }
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:Acumin,Inter,Arial,sans-serif;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.top{
+  position:fixed;
+  z-index:20;
+  top:0;
+  left:0;
+  right:0;
+  padding:18px var(--pad);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(5,5,5,.82);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+
+.logo{
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:-.08em;
+}
+
+.logo span{
+  color:var(--lime);
+  font-size:8px;
+  margin-left:3px;
+}
+
+.back{
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  color:#bbb;
+  transition:.25s ease;
+}
+
+.back:hover{color:var(--lime)}
+
+.sub{
+  max-width:1600px;
+  margin:0 auto;
+  padding:130px var(--pad) 120px;
+}
+
+.intro{
+  min-height:65vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  border-bottom:1px solid var(--line);
+}
+
+.section-no{
+  font-size:10px;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+  color:var(--lime);
+  margin-bottom:25px;
+}
+
+h1{
+  font-size:clamp(75px,14vw,220px);
+  line-height:.72;
+  letter-spacing:-.085em;
+  margin:0;
+  font-weight:850;
+}
+
+.intro-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-top:70px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.3;
+}
+
+.intro-bottom strong{
+  color:var(--fg);
+  font-weight:500;
+}
+
+.project{
+  padding:120px 0 140px;
+  border-bottom:1px solid var(--line);
+}
+
+.project-head{
+  display:grid;
+  grid-template-columns:90px 1fr auto;
+  gap:30px;
+  align-items:end;
+  margin-bottom:55px;
+}
+
+.project-number{
+  color:var(--lime);
+  font-size:11px;
+  letter-spacing:.15em;
+}
+
+.project h2{
+  font-size:clamp(55px,8vw,120px);
+  line-height:.78;
+  letter-spacing:-.07em;
+  margin:0;
+  font-weight:750;
+}
+
+.project-meta{
+  text-align:right;
+  color:var(--muted);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:3px;
+  background:var(--line);
+}
+
+figure{
+  position:relative;
+  margin:0;
+  overflow:hidden;
+  background:#0b0b0b;
+}
+
+figure img{
+  width:100%;
+  height:auto;
+  display:block;
+  transition:
+    transform .7s cubic-bezier(.2,.7,.2,1),
+    opacity .5s ease;
+}
+
+figure:hover img{
+  transform:scale(1.035);
+  opacity:.88;
+}
+
+figcaption{
+  position:absolute;
+  left:18px;
+  bottom:16px;
+  z-index:2;
+  padding:7px 10px;
+  background:rgba(5,5,5,.72);
+  backdrop-filter:blur(8px);
+  color:#ddd;
+  font-size:9px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+
+figure:nth-child(5n+1){
+  grid-column:span 2;
+}
+
+figure:nth-child(5n+1) img{
+  max-height:80vh;
+  object-fit:cover;
+}
+
+.end{
+  padding:100px 0 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.end a{
+  color:var(--lime);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  transition:.25s ease;
+}
+
+.end a:hover{
+  letter-spacing:.22em;
+}
+
+.end span{
+  color:#555;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+}
+
+@media(max-width:800px){
+
+  .top{
+    padding:16px 22px;
+  }
+
+  .sub{
+    padding:100px 18px 70px;
+  }
+
+  .intro{
+    min-height:70vh;
+  }
+
+  h1{
+    font-size:23vw;
+  }
+
+  .intro-bottom{
+    display:block;
+    margin-top:50px;
+  }
+
+  .intro-bottom p{
+    margin-bottom:25px;
+  }
+
+  .project{
+    padding:80px 0 90px;
+  }
+
+  .project-head{
+    grid-template-columns:45px 1fr;
+    gap:12px;
+    margin-bottom:30px;
+  }
+
+  .project-meta{
+    grid-column:2;
+    text-align:left;
+    margin-top:-5px;
+  }
+
+  .project h2{
+    font-size:16vw;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  figure:nth-child(5n+1){
+    grid-column:span 1;
+  }
+
+  figure:nth-child(5n+1) img{
+    max-height:none;
+  }
+
+  figcaption{
+    left:10px;
+    bottom:10px;
+  }
+
+  .end{
+    padding-top:70px;
+    display:block;
+  }
+
+  .end span{
+    display:block;
+    margin-top:20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="top">
+  <a class="logo" href="index.html">LO<span>©</span></a>
+  <a class="back" href="index.html">← Back to Work</a>
+</header>
+
+<main class="sub">
+
+<section class="intro">
+
+  <div class="section-no">03 / SELECTED WORK · SOCIAL MEDIA</div>
+
+  <h1>Social<br>Media</h1>
+
+  <div class="intro-bottom">
+
+    <p>
+      Digital campaigns, content systems<br>
+      and social media visual design.
+    </p>
+
+    <p>
+      <strong>09 Projects</strong><br>
+      Ramallah · Palestine
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- BRAVA -->
+
+<section class="project">
+
+<div class="project-head">
+  <span class="project-number">01</span>
+
+  <h2>Brava</h2>
+
+  <div class="project-meta">
+    Social Media<br>
+    Campaign Design
+  </div>
+</div>
+
+<div class="gallery">
+
+<figure><img src="images/social/brava/brava-01.jpg" alt="Brava social media 01"><figcaption>Brava — 01</figcaption></figure>
+<figure><img src="images/social/brava/brava-02.jpg" alt="Brava social media 02"><figcaption>Brava — 02</figcaption></figure>
+<figure><img src="images/social/brava/brava-03.jpg" alt="Brava social media 03"><figcaption>Brava — 03</figcaption></figure>
+<figure><img src="images/social/brava/brava-04.jpg" alt="Brava social media 04"><figcaption>Brava — 04</figcaption></figure>
+<figure><img src="images/social/brava/brava-05.jpg" alt="Brava social media 05"><figcaption>Brava — 05</figcaption></figure>
+<figure><img src="images/social/brava/brava-06.jpg" alt="Brava social media 06"><figcaption>Brava — 06</figcaption></figure>
+<figure><img src="images/social/brava/brava-07.jpg" alt="Brava social media 07"><figcaption>Brava — 07</figcaption></figure>
+<figure><img src="images/social/brava/brava-08.jpg" alt="Brava social media 08"><figcaption>Brava — 08</figcaption></figure>
+
+</div>
+</section>
+
+
+<!-- CREPPELA -->
+
+<section class="project">
+
+<div class="project-head">
+  <span class="project-number">02</span>
+
+  <h2>Creppela</h2>
+
+  <div class="project-meta">
+    Social Media<br>
+    Campaign Design
+  </div>
+</div>
+
+<div class="gallery">
+
+<figure><img src="images/social/creppela/creppela-01.jpg" alt="Creppela social media 01"><figcaption>Creppela — 01</figcaption></figure>
+<figure><img src="images/social/creppela/creppela-02.jpg" alt="Creppela social media 02"><figcaption>Creppela — 02</figcaption></figure>
+<figure><img src="images/social/creppela/creppela-03.jpg" alt="Creppela social media 03"><figcaption>Creppela — 03</figcaption></figure>
+
+</div>
+</section>
+
+
+<!-- CLOVE -->
+
+<section class="project">
+
+<div class="project-head">
+  <span class="project-number">03</span>
+
+  <h2>Clove</h2>
+
+  <div class="project-meta">
+    Social Media<br>
+    Visual Content
+  </div>
+</div>
+
+<div class="gallery">
+
+<figure><img src="images/social/clove/clove-01.jpg" alt="Clove social media 01"><figcaption>Clove — 01</figcaption></figure>
+
+</div>
+</section>
+
+
+<!-- IZHEMAN -->
+
+<section class="project">
+
+<div class="project-head">
+  <span class="project-number">04</span>
+
+  <h2>Izheman</h2>
+
+  <div class="project-meta">
+    Social Media<br>
+    Content Design
+  </div>
+</div>
+
+<div class="gallery">
+
+<figure><img src="images/social/izheman/izheman-01.jpg" alt="Izheman social media 01"><figcaption>Izheman — 01</figcaption></figure>
+<figure><img src="images/social/izheman/izheman-02.jpg" alt="Izheman social media 02"><figcaption>Izheman — 02</figcaption></figure>
+<figure><img src="images/social/izheman/izheman-03.jpg" alt="Izheman social media 03"><figcaption>Izheman — 03</figcaption></figure>
+<figure><img src="images/social/izheman/izheman-04.jpg" alt="Izheman social media 04"><figcaption>Izheman — 04</figcaption></figure>
+<figure><img src="images/social/izheman/izheman-05.jpg" alt="Izheman social media 05"><figcaption>Izheman — 05</figcaption></figure>
+
+</div>
+</section>
+
+
+<!-- KARTING -->
+
+<section class="project">
+
+<div class="project-head">
+  <span class="project-number">05</span>
+
+  <h2>Karting</h2>
+
+  <div class="project-meta">
+    Social Media<br>
+    Campaign Design
+  </div>
+</div>
+
+<div class="gallery">
+
+<figure><img src="images/social/karting/karting-01.jpg" alt="Karting social media 01"><figcaption>Karting — 01</figcaption></figure>
+<figure><img src="images/social/karting/karting-02.jpg" alt="Karting social media 02"><figcaption>Karting — 02</figcaption></figure>
+<figure><img src="images/social/karting/karting-03.jpg" alt="Karting social media 03"><figcaption>Karting — 03</figcaption></figure>
+<figure><img src="images/social/karting/karting-04.jpg" alt="Karting social media 04"><figcaption>Karting — 04</figcaption></figure>
+<figure><img src="images/social/karting/karting-05.jpg" alt="Karting social media 05"><figcaption>Karting — 05</figcaption></figure>
+<figure><img src="images/social/karting/karting-06.jpg" alt="Karting social media 06"><figcaption>Karting — 06</figcaption></figure>
+
+</div>
+</section>
+
+
+<!-- LITTLES -->
+
+<section class="project">
+
+<div class="project-head">
+  <span class="project-number">06</span>
+
+  <h2>Littles</h2>
+
+  <div class="project-meta">
+    Social Media<br>
+    Content Design
+  </div>
+</div>
+
+<div class="gallery">
+
+<figure><img src="images/social/littles/littles-01.jpg" alt="Littles social media 01"><figcaption>Littles — 01</figcaption></figure>
+<figure><img src="images/social/littles/littles-02.jpg" alt="Littles social media 02"><figcaption>Littles — 02</figcaption></figure>
+<figure><img src="images/social/littles/littles-03.jpg" alt="Littles social media 03"><figcaption>Littles — 03</figcaption></figure>
+<figure><img src="images/social/littles/littles-04.jpg" alt="Littles social media 04"><figcaption>Littles — 04</figcaption></figure>
+<figure><img src="images/social/littles/littles-05.jpg" alt="Littles social media 05"><figcaption>Littles — 05</figcaption></figure>
+<figure><img src="images/social/littles/littles-06.jpg" alt="Littles social media 06"><figcaption>Littles — 06</figcaption></figure>
+
+</div>
+</section>
+
+
+<!-- MAYORAL -->
+
+<section class="project">
+
+<div class="project-head">
+  <span class="project-number">07</span>
+
+  <h2>Mayoral</h2>
+
+  <div class="project-meta">
+    Social Media<br>
+    Campaign Design
+  </div>
+</div>
+
+<div class="gallery">
+
+<figure><img src="images/social/mayoral/mayoral-01.jpg" alt="Mayoral social media 01"><figcaption>Mayoral — 01</figcaption></figure>
+<figure><img src="images/social/mayoral/mayoral-02.jpg" alt="Mayoral social media 02"><figcaption>Mayoral — 02</figcaption></figure>
+<figure><img src="images/social/mayoral/mayoral-03.jpg" alt="Mayoral social media 03"><figcaption>Mayoral — 03</figcaption></figure>
+<figure><img src="images/social/mayoral/mayoral-04.jpg" alt="Mayoral social media 04"><figcaption>Mayoral — 04</figcaption></figure>
+<figure><img src="images/social/mayoral/mayoral-05.jpg" alt="Mayoral social media 05"><figcaption>Mayoral — 05</figcaption></figure>
+<figure><img src="images/social/mayoral/mayoral-06.jpg" alt="Mayoral social media 06"><figcaption>Mayoral — 06</figcaption></figure>
+<figure><img src="images/social/mayoral/mayoral-07.jpg" alt="Mayoral social media 07"><figcaption>Mayoral — 07</figcaption></figure>
+
+</div>
+</section>
+
+
+<!-- PROTIEN -->
+
+<section class="project">
+
+<div class="project-head">
+  <span class="project-number">08</span>
+
+  <h2>Protien</h2>
+
+  <div class="project-meta">
+    Social Media<br>
+    Content Design
+  </div>
+</div>
+
+<div class="gallery">
+
+<figure><img src="images/social/protien/protien-01.jpg" alt="Protien social media 01"><figcaption>Protien — 01</figcaption></figure>
+<figure><img src="images/social/protien/protien-02.jpg" alt="Protien social media 02"><figcaption>Protien — 02</figcaption></figure>
+<figure><img src="images/social/protien/protien-03.jpg" alt="Protien social media 03"><figcaption>Protien — 03</figcaption></figure>
+<figure><img src="images/social/protien/protien-04.jpg" alt="Protien social media 04"><figcaption>Protien — 04</figcaption></figure>
+<figure><img src="images/social/protien/protien-05.jpg" alt="Protien social media 05"><figcaption>Protien — 05</figcaption></figure>
+<figure><img src="images/social/protien/protien-06.jpg" alt="Protien social media 06"><figcaption>Protien — 06</figcaption></figure>
+
+</div>
+</section>
+
+
+<!-- UNITED EXPRESS -->
+
+<section class="project">
+
+<div class="project-head">
+  <span class="project-number">09</span>
+
+  <h2>United<br>Express</h2>
+
+  <div class="project-meta">
+    Social Media<br>
+    Campaign Design
+  </div>
+</div>
+
+<div class="gallery">
+
+<figure><img src="images/social/united-express/united-express-01.jpg" alt="United Express social media 01"><figcaption>United Express — 01</figcaption></figure>
+<figure><img src="images/social/united-express/united-express-02.jpg" alt="United Express social media 02"><figcaption>United Express — 02</figcaption></figure>
+<figure><img src="images/social/united-express/united-express-03.jpg" alt="United Express social media 03"><figcaption>United Express — 03</figcaption></figure>
+<figure><img src="images/social/united-express/united-express-04.jpg" alt="United Express social media 04"><figcaption>United Express — 04</figcaption></figure>
+<figure><img src="images/social/united-express/united-express-05.jpg" alt="United Express social media 05"><figcaption>United Express — 05</figcaption></figure>
+<figure><img src="images/social/united-express/united-express-06.jpg" alt="United Express social media 06"><figcaption>United Express — 06</figcaption></figure>
+<figure><img src="images/social/united-express/united-express-07.jpg" alt="United Express social media 07"><figcaption>United Express — 07</figcaption></figure>
+<figure><img src="images/social/united-express/united-express-08.jpg" alt="United Express social media 08"><figcaption>United Express — 08</figcaption></figure>
+<figure><img src="images/social/united-express/united-express-09.jpg" alt="United Express social media 09"><figcaption>United Express — 09</figcaption></figure>
+<figure><img src="images/social/united-express/united-express-10.jpg" alt="United Express social media 10"><figcaption>United Express — 10</figcaption></figure>
+<figure><img src="images/social/united-express/united-express-11.jpg" alt="United Express social media 11"><figcaption>United Express — 11</figcaption></figure>
+<figure><img src="images/social/united-express/united-express-12.jpg" alt="United Express social media 12"><figcaption>United Express — 12</figcaption></figure>
+<figure><img src="images/social/united-express/united-express-13.jpg" alt="United Express social media 13"><figcaption>United Express — 13</figcaption></figure>
+<figure><img src="images/social/united-express/united-express-14.jpg" alt="United Express social media 14"><figcaption>United Express — 14</figcaption></figure>
+
+</div>
+</section>
+
+
+<div class="end">
+  <a href="index.html">← Back to Selected Work</a>
+  <span>© 2026 Lana Othman · Graphic Designer</span>
+</div>
+
+</main>
+
+</body>
+</html>    }
 
     h1 {
       font-size: clamp(60px, 10vw, 150px);
