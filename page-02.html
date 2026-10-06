@@ -1,173 +1,82 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Page 01 — Lana Othman</title>
+<title>Lana Othman — Project 02</title>
 <link rel="stylesheet" href="style.css">
 
 <style>
-.sub{
-  min-height:100vh;
-  padding:120px var(--pad) 70px;
-}
-.sub-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.back{
-  color:var(--lime);
-  font-size:10px;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-}
-.page-no{
-  font-size:10px;
-  letter-spacing:.16em;
-  color:var(--muted);
-}
-.sub h1{
-  font-size:clamp(80px,15vw,210px);
-  line-height:.72;
-  letter-spacing:-.08em;
-  margin:90px 0 30px;
-}
-.sub h1 i{
-  font-style:normal;
-  font-weight:250;
-}
-.sub-intro{
-  max-width:500px;
-  color:var(--muted);
-  font-size:16px;
-  line-height:1.4;
-}
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:2px;
-  background:var(--line);
-  margin-top:70px;
-}
-.slot{
-  min-height:420px;
-  background:#090909;
-  padding:25px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  border-left:3px solid transparent;
-  transition:.35s ease;
-}
-.slot:hover{
-  background:#111;
-  border-left-color:var(--lime);
-  transform:translateY(-3px);
-}
-.slot-number{
-  color:var(--muted);
-  font-size:10px;
-  letter-spacing:.16em;
-}
-.slot-center{
-  text-align:center;
-}
-.slot-center strong{
-  display:block;
-  font-size:70px;
-  line-height:1;
-  color:#1d1d1d;
-  font-weight:800;
-}
-.slot-center span{
-  font-size:9px;
-  letter-spacing:.18em;
-  color:#555;
-}
-.slot-title{
-  font-size:11px;
-  letter-spacing:.12em;
-  color:var(--muted);
-  text-transform:uppercase;
-}
-.bottom-link{
-  display:block;
-  margin-top:60px;
-  color:var(--lime);
-  font-size:10px;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-}
+.project-page{background:#050505;color:#f4f4f0;min-height:100vh}
+.project-nav{position:fixed;top:0;left:0;right:0;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;border-bottom:1px solid #252525;background:rgba(5,5,5,.92);backdrop-filter:blur(14px);z-index:20}
+.project-nav a{color:#f4f4f0;text-decoration:none;text-transform:uppercase;font-size:12px;letter-spacing:.12em}
+.project-logo{font-size:24px;font-weight:800;letter-spacing:-.08em}
+.project-logo span{color:#b7e600}
+.project-main{padding:76px 4vw 0}
+.project-intro{min-height:70vh;display:flex;flex-direction:column;justify-content:flex-end;padding:8vw 0 7vw}
+.project-number{color:#b7e600;font-size:12px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:30px}
+.project-intro h1{font-size:clamp(64px,12vw,180px);line-height:.82;letter-spacing:-.07em;margin:0}
+.project-intro h1 i{font-weight:300}
+.project-info{display:grid;grid-template-columns:1fr 1fr;gap:40px;border-top:1px solid #292929;padding-top:22px;margin-top:60px}
+.project-info p{margin:0;color:#92928d;font-size:14px;line-height:1.7}
+.project-info strong{display:block;color:#f4f4f0;font-size:12px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding-bottom:100px}
+.gallery img{display:block;width:100%;height:auto;transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .6s}
+.gallery a{display:block;overflow:hidden;background:#111}
+.gallery a:hover img{transform:scale(1.025);filter:brightness(1.08)}
+.gallery .wide{grid-column:1/-1}
+.project-footer{border-top:1px solid #292929;padding:60px 0 100px;display:flex;justify-content:space-between}
+.project-footer a{color:#f4f4f0;text-decoration:none;text-transform:uppercase;font-size:12px;letter-spacing:.12em}
+.project-footer a:hover{color:#b7e600}
 @media(max-width:700px){
-  .sub{padding-top:100px}
-  .gallery{grid-template-columns:1fr}
-  .slot{min-height:320px}
+.project-nav{padding:0 20px}.project-main{padding-left:20px;padding-right:20px}
+.project-intro{min-height:65vh}.project-info{grid-template-columns:1fr}
+.gallery{grid-template-columns:1fr;gap:10px}.gallery .wide{grid-column:auto}
 }
 </style>
 </head>
 
-<body>
+<body class="project-page">
 
-<main class="sub">
+<header class="project-nav">
+<a href="index.html" class="project-logo">LO<span>©</span></a>
+<a href="index.html#work">Back to Work ↗</a>
+</header>
 
-<div class="sub-top">
-<a class="back" href="social-media.html">← Social Media</a>
-<span class="page-no">01 / 06</span>
+<main class="project-main">
+
+<section class="project-intro">
+<div class="project-number">02 / Selected Project</div>
+<h1>Social<br><i>Media</i></h1>
+
+<div class="project-info">
+<div>
+<strong>Category</strong>
+<p>Social Media · Digital Content</p>
 </div>
-
-<div class="section-no">02 / SOCIAL MEDIA</div>
-
-<h1>Page <i>01</i></h1>
-
-<p class="sub-intro">
-A selected visual design project by Lana Othman. 
-Digital campaigns, social content and visual communication.
-</p>
-
-<section class="gallery">
-
-<div class="slot">
-<span class="slot-number">01</span>
-<div class="slot-center"><strong>01</strong><span>PROJECT IMAGE</span></div>
-<span class="slot-title">Social Media Design 01</span>
+<div>
+<strong>Designer</strong>
+<p>Lana Othman · Ramallah, Palestine</p>
 </div>
-
-<div class="slot">
-<span class="slot-number">02</span>
-<div class="slot-center"><strong>02</strong><span>PROJECT IMAGE</span></div>
-<span class="slot-title">Social Media Design 02</span>
 </div>
-
-<div class="slot">
-<span class="slot-number">03</span>
-<div class="slot-center"><strong>03</strong><span>PROJECT IMAGE</span></div>
-<span class="slot-title">Social Media Design 03</span>
-</div>
-
-<div class="slot">
-<span class="slot-number">04</span>
-<div class="slot-center"><strong>04</strong><span>PROJECT IMAGE</span></div>
-<span class="slot-title">Social Media Design 04</span>
-</div>
-
-<div class="slot">
-<span class="slot-number">05</span>
-<div class="slot-center"><strong>05</strong><span>PROJECT IMAGE</span></div>
-<span class="slot-title">Social Media Design 05</span>
-</div>
-
-<div class="slot">
-<span class="slot-number">06</span>
-<div class="slot-center"><strong>06</strong><span>PROJECT IMAGE</span></div>
-<span class="slot-title">Social Media Design 06</span>
-</div>
-
 </section>
 
-<a class="bottom-link" href="social-media.html">← Back to Social Media</a>
+<section class="gallery">
+<a href="#"><img src="images/social/brava/brava-01.jpg" alt="Social Media Design"></a>
+<a href="#"><img src="images/social/brava/brava-02.jpg" alt="Social Media Design"></a>
+<a href="#" class="wide"><img src="images/social/brava/brava-03.jpg" alt="Social Media Design"></a>
+<a href="#"><img src="images/social/brava/brava-04.jpg" alt="Social Media Design"></a>
+<a href="#"><img src="images/social/brava/brava-05.jpg" alt="Social Media Design"></a>
+<a href="#"><img src="images/social/brava/brava-06.jpg" alt="Social Media Design"></a>
+<a href="#"><img src="images/social/brava/brava-07.jpg" alt="Social Media Design"></a>
+<a href="#"><img src="images/social/brava/brava-08.jpg" alt="Social Media Design"></a>
+</section>
+
+<footer class="project-footer">
+<a href="page-01.html">← Previous</a>
+<a href="page-03.html">Next Project →</a>
+</footer>
 
 </main>
-
 </body>
 </html>
