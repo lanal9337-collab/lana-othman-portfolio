@@ -94,4 +94,64 @@
 </main>
 
 </body>
+</html>    }
+
+    h1 {
+      font-size: clamp(60px, 10vw, 150px);
+      line-height: .9;
+      margin: 0 0 100px;
+      letter-spacing: -.06em;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    figure img {
+      width: 100%;
+      display: block;
+    }
+
+    figcaption {
+      padding: 10px 0 0;
+      font-size: 12px;
+      color: #77736b;
+    }
+
+    @media (max-width: 700px) {
+      .sub { padding: 25px 18px 70px; }
+      .gallery { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="sub">
+
+<a class="back" href="index.html">← Back to work</a>
+
+<div class="section-no">SELECTED WORK</div>
+<h1>Art</h1>
+
+<div class="gallery">
+
+<figure><img src="images/art/art-01.jpg" alt="Art work 01"><figcaption>Art — 01</figcaption></figure>
+<figure><img src="images/art/art-02.jpg" alt="Art work 02"><figcaption>Art — 02</figcaption></figure>
+<figure><img src="images/art/art-03.jpg" alt="Art work 03"><figcaption>Art — 03</figcaption></figure>
+<figure><img src="images/art/art-04.jpg" alt="Art work 04"><figcaption>Art — 04</figcaption></figure>
+<figure><img src="images/art/art-05.jpg" alt="Art work 05"><figcaption>Art — 05</figcaption></figure>
+<figure><img src="images/art/art-06.jpg" alt="Art work 06"><figcaption>Art — 06</figcaption></figure>
+
+</div>
+
+</main>
+
+</body>
 </html>
