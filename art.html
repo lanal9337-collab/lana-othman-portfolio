@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -197,41 +198,19 @@
       background:#050505;
     }
 
-    figure::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:rgba(0,0,0,.90);
-      z-index:2;
-      pointer-events:none;
-      transition:background .7s ease;
-    }
-
     figure img{
       position:relative;
       z-index:1;
       display:block;
       width:100%;
       height:auto;
-      filter:
-        brightness(.72)
-        saturate(.55)
-        contrast(1.03);
+      filter:none;
       transform:scale(1.001);
       transition:
-        transform .9s cubic-bezier(.2,.7,.2,1),
-        filter .9s cubic-bezier(.2,.7,.2,1);
-    }
-
-    figure:hover::after{
-      background:rgba(0,0,0,.76);
+        transform .9s cubic-bezier(.2,.7,.2,1);
     }
 
     figure:hover img{
-      filter:
-        brightness(.92)
-        saturate(.72)
-        contrast(1.03);
       transform:scale(1.035);
     }
 
@@ -338,19 +317,8 @@
         grid-column:auto;
       }
 
-      figure::after{
-        background:rgba(0,0,0,.90);
-      }
-
-      figure:hover::after{
-        background:rgba(0,0,0,.90);
-      }
-
       figure img{
-        filter:
-          brightness(.72)
-          saturate(.55)
-          contrast(1.03);
+        filter:none;
       }
 
       .project-footer{
@@ -472,3 +440,4 @@
 
 </body>
 </html>
+```
