@@ -202,41 +202,19 @@
       background:#050505;
     }
 
-    figure::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:rgba(0,0,0,.90);
-      z-index:2;
-      pointer-events:none;
-      transition:background .7s ease;
-    }
-
     figure img{
       position:relative;
       z-index:1;
       display:block;
       width:100%;
       height:auto;
-      filter:
-        brightness(.72)
-        saturate(.55)
-        contrast(1.03);
+      filter:none;
       transform:scale(1.001);
       transition:
-        transform .9s cubic-bezier(.2,.7,.2,1),
-        filter .9s cubic-bezier(.2,.7,.2,1);
-    }
-
-    figure:hover::after{
-      background:rgba(0,0,0,.76);
+        transform .9s cubic-bezier(.2,.7,.2,1);
     }
 
     figure:hover img{
-      filter:
-        brightness(.92)
-        saturate(.72)
-        contrast(1.03);
       transform:scale(1.035);
     }
 
@@ -343,19 +321,8 @@
         grid-column:auto;
       }
 
-      figure::after{
-        background:rgba(0,0,0,.90);
-      }
-
-      figure:hover::after{
-        background:rgba(0,0,0,.90);
-      }
-
       figure img{
-        filter:
-          brightness(.72)
-          saturate(.55)
-          contrast(1.03);
+        filter:none;
       }
 
       .project-footer{
@@ -479,67 +446,6 @@
     </a>
 
   </footer>
-
-</body>
-</html>    }
-
-    h1 {
-      font-size: clamp(60px, 10vw, 150px);
-      line-height: .9;
-      margin: 0 0 100px;
-      letter-spacing: -.06em;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    figure {
-      margin: 0;
-    }
-
-    figure img {
-      width: 100%;
-      display: block;
-    }
-
-    figcaption {
-      padding: 10px 0 0;
-      font-size: 12px;
-      color: #77736b;
-    }
-
-    @media (max-width: 700px) {
-      .sub { padding: 25px 18px 70px; }
-      .gallery { grid-template-columns: 1fr; }
-    }
-  </style>
-</head>
-
-<body>
-
-<main class="sub">
-
-<a class="back" href="index.html">← Back to work</a>
-
-<div class="section-no">SELECTED WORK</div>
-<h1>Print</h1>
-
-<div class="gallery">
-
-<figure><img src="images/print/print-01.jpg" alt="Print design 01"><figcaption>Print — 01</figcaption></figure>
-<figure><img src="images/print/print-02.jpg" alt="Print design 02"><figcaption>Print — 02</figcaption></figure>
-<figure><img src="images/print/print-03.jpg" alt="Print design 03"><figcaption>Print — 03</figcaption></figure>
-<figure><img src="images/print/print-04.jpg" alt="Print design 04"><figcaption>Print — 04</figcaption></figure>
-<figure><img src="images/print/print-05.jpg" alt="Print design 05"><figcaption>Print — 05</figcaption></figure>
-<figure><img src="images/print/print-06.jpg" alt="Print design 06"><figcaption>Print — 06</figcaption></figure>
-<figure><img src="images/print/print-07.jpg" alt="Print design 07"><figcaption>Print — 07</figcaption></figure>
-
-</div>
-
-</main>
 
 </body>
 </html>
