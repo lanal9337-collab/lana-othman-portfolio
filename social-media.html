@@ -201,15 +201,7 @@ h1{
   border:1px solid rgba(255,255,255,.055);
 }
 
-.gallery figure::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.90);
-  z-index:2;
-  pointer-events:none;
-  transition:background .8s ease;
-}
+/* NORMAL BRIGHT IMAGES */
 
 .gallery img{
   position:relative;
@@ -217,19 +209,13 @@ h1{
   display:block;
   width:100%;
   height:auto;
-  filter:brightness(.72) saturate(.55) contrast(1.03);
+  filter:none;
   transform:scale(1.001);
   transition:
-    transform .9s cubic-bezier(.2,.7,.2,1),
-    filter .9s cubic-bezier(.2,.7,.2,1);
-}
-
-.gallery figure:hover::after{
-  background:rgba(0,0,0,.76);
+    transform .9s cubic-bezier(.2,.7,.2,1);
 }
 
 .gallery figure:hover img{
-  filter:brightness(.92) saturate(.72) contrast(1.03);
   transform:scale(1.035);
 }
 
@@ -354,16 +340,8 @@ figcaption{
     max-height:none;
   }
 
-  .gallery figure::after{
-    background:rgba(0,0,0,.90);
-  }
-
-  .gallery figure:hover::after{
-    background:rgba(0,0,0,.90);
-  }
-
   .gallery img{
-    filter:brightness(.72) saturate(.55) contrast(1.03);
+    filter:none;
   }
 
   figcaption{
