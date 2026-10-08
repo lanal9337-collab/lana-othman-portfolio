@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,7 @@
 <title>Branding — Lana Othman</title>
 
 <style>
+
 @font-face{
   font-family:Acumin;
   src:local("Acumin Variable Concept");
@@ -43,7 +45,10 @@ a{
   text-decoration:none;
 }
 
-/* NAV */
+
+/* =========================
+   NAV
+========================= */
 
 .top{
   position:fixed;
@@ -85,7 +90,10 @@ a{
   color:var(--lime);
 }
 
-/* MAIN */
+
+/* =========================
+   MAIN
+========================= */
 
 .sub{
   max-width:1600px;
@@ -93,7 +101,10 @@ a{
   padding:110px var(--pad) 100px;
 }
 
-/* INTRO */
+
+/* =========================
+   INTRO
+========================= */
 
 .intro{
   min-height:72vh;
@@ -144,7 +155,10 @@ h1{
   font-weight:500;
 }
 
-/* PROJECT */
+
+/* =========================
+   PROJECT
+========================= */
 
 .project{
   padding:130px 0 150px;
@@ -183,7 +197,10 @@ h1{
   line-height:1.5;
 }
 
-/* GALLERY */
+
+/* =========================
+   GALLERY
+========================= */
 
 .gallery{
   position:relative;
@@ -193,7 +210,10 @@ h1{
   background:transparent;
 }
 
-/* IMAGE FRAME */
+
+/* =========================
+   IMAGE FRAME
+========================= */
 
 .gallery figure{
   position:relative;
@@ -203,19 +223,11 @@ h1{
   border:1px solid rgba(255,255,255,.055);
 }
 
-/* DARK IMAGE */
 
-.gallery figure::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.90);
-  z-index:2;
-  pointer-events:none;
-  transition:background .8s ease;
-}
-
-/* IMAGE */
+/* =========================
+   IMAGE
+   NO DARK OVERLAY
+========================= */
 
 .gallery img{
   position:relative;
@@ -223,25 +235,30 @@ h1{
   display:block;
   width:100%;
   height:auto;
-  filter:brightness(.72) saturate(.55) contrast(1.03);
+
+  filter:none;
+
   transform:scale(1.001);
+
   transition:
     transform .9s cubic-bezier(.2,.7,.2,1),
     filter .9s cubic-bezier(.2,.7,.2,1);
 }
 
-/* HOVER */
 
-.gallery figure:hover::after{
-  background:rgba(0,0,0,.76);
-}
+/* =========================
+   HOVER
+========================= */
 
 .gallery figure:hover img{
-  filter:brightness(.92) saturate(.72) contrast(1.03);
+  filter:none;
   transform:scale(1.035);
 }
 
-/* CAPTION */
+
+/* =========================
+   CAPTION
+========================= */
 
 figcaption{
   position:absolute;
@@ -259,7 +276,10 @@ figcaption{
   text-transform:uppercase;
 }
 
-/* FULL WIDTH */
+
+/* =========================
+   FULL WIDTH
+========================= */
 
 .gallery figure:nth-child(5n+1){
   grid-column:span 2;
@@ -270,7 +290,10 @@ figcaption{
   object-fit:cover;
 }
 
-/* END */
+
+/* =========================
+   END
+========================= */
 
 .end{
   padding:100px 0 20px;
@@ -298,7 +321,10 @@ figcaption{
   letter-spacing:.14em;
 }
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:800px){
 
@@ -364,16 +390,8 @@ figcaption{
     max-height:none;
   }
 
-  .gallery figure::after{
-    background:rgba(0,0,0,.90);
-  }
-
-  .gallery figure:hover::after{
-    background:rgba(0,0,0,.90);
-  }
-
   .gallery img{
-    filter:brightness(.72) saturate(.55) contrast(1.03);
+    filter:none;
   }
 
   figcaption{
@@ -390,842 +408,332 @@ figcaption{
     display:block;
     margin-top:20px;
   }
+
 }
+
 </style>
 </head>
 
-<body>
-
-<header class="top">
-  <a class="logo" href="index.html">LO<span>©</span></a>
-  <a class="back" href="index.html">← Back to Work</a>
-</header>
-
-<main class="sub">
-
-  <!-- INTRO -->
-
-  <section class="intro">
-
-    <div class="section-no">
-      03 / SELECTED WORK · BRANDING
-    </div>
-
-    <h1>Branding</h1>
-
-    <div class="intro-bottom">
-
-      <p>
-        Visual identities, brand systems<br>
-        and distinctive brand experiences.
-      </p>
-
-      <p>
-        <strong>03 Projects</strong><br>
-        Ramallah · Palestine
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- UNITED EXPRESS -->
-
-  <section class="project">
-
-    <div class="project-head">
-
-      <span class="project-number">01</span>
-
-      <h2>United<br>Express</h2>
-
-      <div class="project-meta">
-        Brand Identity<br>
-        Visual System
-      </div>
-
-    </div>
-
-    <div class="gallery">
-
-      <figure>
-        <img src="images/branding/united-express/united-express-01.jpg" alt="United Express branding 01">
-        <figcaption>United Express — 01</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-02.jpg" alt="United Express branding 02">
-        <figcaption>United Express — 02</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-03.jpg" alt="United Express branding 03">
-        <figcaption>United Express — 03</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-04.jpg" alt="United Express branding 04">
-        <figcaption>United Express — 04</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-05.jpg" alt="United Express branding 05">
-        <figcaption>United Express — 05</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-06.jpg" alt="United Express branding 06">
-        <figcaption>United Express — 06</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-07.jpg" alt="United Express branding 07">
-        <figcaption>United Express — 07</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-08.jpg" alt="United Express branding 08">
-        <figcaption>United Express — 08</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-09.jpg" alt="United Express branding 09">
-        <figcaption>United Express — 09</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-10.jpg" alt="United Express branding 10">
-        <figcaption>United Express — 10</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-11.jpg" alt="United Express branding 11">
-        <figcaption>United Express — 11</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-12.jpg" alt="United Express branding 12">
-        <figcaption>United Express — 12</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-13.jpg" alt="United Express branding 13">
-        <figcaption>United Express — 13</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-14.jpg" alt="United Express branding 14">
-        <figcaption>United Express — 14</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-15.jpg" alt="United Express branding 15">
-        <figcaption>United Express — 15</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-16.jpg" alt="United Express branding 16">
-        <figcaption>United Express — 16</figcaption>
-      </figure>
-
-    </div>
-
-  </section>
-
-
-  <!-- GARAGE -->
-
-  <section class="project">
-
-    <div class="project-head">
-
-      <span class="project-number">02</span>
-
-      <h2>Garage</h2>
-
-      <div class="project-meta">
-        Brand Identity<br>
-        Art Direction
-      </div>
-
-    </div>
-
-    <div class="gallery">
-
-      <figure>
-        <img src="images/branding/garage/garage-01.jpg" alt="Garage branding 01">
-        <figcaption>Garage — 01</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/garage/garage-02.jpg" alt="Garage branding 02">
-        <figcaption>Garage — 02</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/garage/garage-03.jpg" alt="Garage branding 03">
-        <figcaption>Garage — 03</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/garage/garage-04.jpg" alt="Garage branding 04">
-        <figcaption>Garage — 04</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/garage/garage-05.jpg" alt="Garage branding 05">
-        <figcaption>Garage — 05</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/garage/garage-06.jpg" alt="Garage branding 06">
-        <figcaption>Garage — 06</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/garage/garage-07.jpg" alt="Garage branding 07">
-        <figcaption>Garage — 07</figcaption>
-      </figure>
-
-    </div>
-
-  </section>
-
-
-  <!-- WINK CO -->
-
-  <section class="project">
-
-    <div class="project-head">
-
-      <span class="project-number">03</span>
-
-      <h2>Wink<br>Co.</h2>
-
-      <div class="project-meta">
-        Brand Identity<br>
-        Creative Direction
-      </div>
-
-    </div>
-
-    <div class="gallery">
-
-      <figure>
-        <img src="images/branding/wink-co/wink-co-01.jpg" alt="Wink Co branding 01">
-        <figcaption>Wink Co. — 01</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/wink-co/wink-co-02.jpg" alt="Wink Co branding 02">
-        <figcaption>Wink Co. — 02</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/wink-co/wink-co-03.jpg" alt="Wink Co branding 03">
-        <figcaption>Wink Co. — 03</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/wink-co/wink-co-04.jpg" alt="Wink Co branding 04">
-        <figcaption>Wink Co. — 04</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/wink-co/wink-co-05.jpg" alt="Wink Co branding 05">
-        <figcaption>Wink Co. — 05</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/wink-co/wink-co-06.jpg" alt="Wink Co branding 06">
-        <figcaption>Wink Co. — 06</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/wink-co/wink-co-07.jpg" alt="Wink Co branding 07">
-        <figcaption>Wink Co. — 07</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/wink-co/wink-co-08.jpg" alt="Wink Co branding 08">
-        <figcaption>Wink Co. — 08</figcaption>
-      </figure>
-
-    </div>
-
-  </section>
-
-
-  <!-- END -->
-
-  <div class="end">
-    <a href="index.html">← Back to Selected Work</a>
-    <span>© 2026 Lana Othman · Graphic Designer</span>
-  </div>
-
-</main>
-
-</body>
-</html>  font-family:Acumin,Inter,Arial,sans-serif;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-/* TOP */
-
-.top{
-  position:fixed;
-  z-index:20;
-  top:0;
-  left:0;
-  right:0;
-  padding:18px var(--pad);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:rgba(5,5,5,.82);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line);
-}
-
-.logo{
-  font-size:22px;
-  font-weight:900;
-  letter-spacing:-.08em;
-}
-
-.logo span{
-  color:var(--lime);
-  font-size:8px;
-  margin-left:3px;
-}
-
-.back{
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  color:#bbb;
-  transition:.25s ease;
-}
-
-.back:hover{
-  color:var(--lime);
-}
-
-/* MAIN */
-
-.sub{
-  max-width:1600px;
-  margin:0 auto;
-  padding:130px var(--pad) 120px;
-}
-
-.intro{
-  min-height:65vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  border-bottom:1px solid var(--line);
-}
-
-.section-no{
-  font-size:10px;
-  letter-spacing:.17em;
-  text-transform:uppercase;
-  color:var(--lime);
-  margin-bottom:25px;
-}
-
-h1{
-  font-size:clamp(90px,17vw,260px);
-  line-height:.72;
-  letter-spacing:-.085em;
-  margin:0;
-  font-weight:850;
-}
-
-.intro-bottom{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  margin-top:70px;
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.3;
-}
-
-.intro-bottom strong{
-  color:var(--fg);
-  font-weight:500;
-}
-
-/* PROJECT */
-
-.project{
-  padding:120px 0 140px;
-  border-bottom:1px solid var(--line);
-}
-
-.project-head{
-  display:grid;
-  grid-template-columns:90px 1fr auto;
-  gap:30px;
-  align-items:end;
-  margin-bottom:55px;
-}
-
-.project-number{
-  color:var(--lime);
-  font-size:11px;
-  letter-spacing:.15em;
-}
-
-.project h2{
-  font-size:clamp(55px,8vw,120px);
-  line-height:.78;
-  letter-spacing:-.07em;
-  margin:0;
-  font-weight:750;
-}
-
-.project-meta{
-  text-align:right;
-  color:var(--muted);
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:.15em;
-}
-
-/* GALLERY */
-
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:3px;
-  background:var(--line);
-}
-
-figure{
-  position:relative;
-  margin:0;
-  overflow:hidden;
-  background:#0b0b0b;
-}
-
-figure img{
-  width:100%;
-  height:auto;
-  display:block;
-  transition:
-    transform .7s cubic-bezier(.2,.7,.2,1),
-    opacity .5s ease;
-}
-
-figure:hover img{
-  transform:scale(1.035);
-  opacity:.88;
-}
-
-figcaption{
-  position:absolute;
-  left:18px;
-  bottom:16px;
-  z-index:2;
-  padding:7px 10px;
-  background:rgba(5,5,5,.72);
-  backdrop-filter:blur(8px);
-  color:#ddd;
-  font-size:9px;
-  letter-spacing:.13em;
-  text-transform:uppercase;
-}
-
-/* FULL WIDTH IMAGES */
-
-figure:nth-child(5n+1){
-  grid-column:span 2;
-}
-
-figure:nth-child(5n+1) img{
-  max-height:80vh;
-  object-fit:cover;
-}
-
-/* END */
-
-.end{
-  padding:100px 0 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.end a{
-  color:var(--lime);
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  transition:.25s ease;
-}
-
-.end a:hover{
-  letter-spacing:.22em;
-}
-
-.end span{
-  color:#555;
-  font-size:9px;
-  text-transform:uppercase;
-  letter-spacing:.14em;
-}
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-  .top{
-    padding:16px 22px;
-  }
-
-  .sub{
-    padding:100px 18px 70px;
-  }
-
-  .intro{
-    min-height:70vh;
-  }
-
-  h1{
-    font-size:25vw;
-  }
-
-  .intro-bottom{
-    display:block;
-    margin-top:50px;
-  }
-
-  .intro-bottom p{
-    margin-bottom:25px;
-  }
-
-  .project{
-    padding:80px 0 90px;
-  }
-
-  .project-head{
-    grid-template-columns:45px 1fr;
-    gap:12px;
-    margin-bottom:30px;
-  }
-
-  .project-meta{
-    grid-column:2;
-    text-align:left;
-    margin-top:-5px;
-  }
-
-  .project h2{
-    font-size:16vw;
-  }
-
-  .gallery{
-    grid-template-columns:1fr;
-  }
-
-  figure:nth-child(5n+1){
-    grid-column:span 1;
-  }
-
-  figure:nth-child(5n+1) img{
-    max-height:none;
-  }
-
-  figcaption{
-    left:10px;
-    bottom:10px;
-  }
-
-  .end{
-    padding-top:70px;
-    display:block;
-  }
-
-  .end span{
-    display:block;
-    margin-top:20px;
-  }
-}
-</style>
-</head>
 
 <body>
 
+
 <header class="top">
-  <a class="logo" href="index.html">LO<span>©</span></a>
-  <a class="back" href="index.html">← Back to Work</a>
+
+  <a class="logo" href="index.html">
+    LO<span>©</span>
+  </a>
+
+  <a class="back" href="index.html">
+    ← Back to Work
+  </a>
+
 </header>
+
 
 <main class="sub">
 
-  <!-- INTRO -->
 
-  <section class="intro">
+<!-- =========================
+     INTRO
+========================= -->
 
-    <div class="section-no">03 / SELECTED WORK · BRANDING</div>
+<section class="intro">
 
-    <h1>Branding</h1>
-
-    <div class="intro-bottom">
-      <p>
-        Visual identities, brand systems<br>
-        and distinctive brand experiences.
-      </p>
-
-      <p>
-        <strong>03 Projects</strong><br>
-        Ramallah · Palestine
-      </p>
-    </div>
-
-  </section>
-
-
-  <!-- UNITED EXPRESS -->
-
-  <section class="project">
-
-    <div class="project-head">
-
-      <span class="project-number">01</span>
-
-      <h2>United<br>Express</h2>
-
-      <div class="project-meta">
-        Brand Identity<br>
-        Visual System
-      </div>
-
-    </div>
-
-    <div class="gallery">
-
-      <figure>
-        <img src="images/branding/united-express/united-express-01.jpg" alt="United Express branding 01">
-        <figcaption>United Express — 01</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-02.jpg" alt="United Express branding 02">
-        <figcaption>United Express — 02</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-03.jpg" alt="United Express branding 03">
-        <figcaption>United Express — 03</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-04.jpg" alt="United Express branding 04">
-        <figcaption>United Express — 04</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-05.jpg" alt="United Express branding 05">
-        <figcaption>United Express — 05</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-06.jpg" alt="United Express branding 06">
-        <figcaption>United Express — 06</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-07.jpg" alt="United Express branding 07">
-        <figcaption>United Express — 07</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-08.jpg" alt="United Express branding 08">
-        <figcaption>United Express — 08</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-09.jpg" alt="United Express branding 09">
-        <figcaption>United Express — 09</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-10.jpg" alt="United Express branding 10">
-        <figcaption>United Express — 10</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-11.jpg" alt="United Express branding 11">
-        <figcaption>United Express — 11</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-12.jpg" alt="United Express branding 12">
-        <figcaption>United Express — 12</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-13.jpg" alt="United Express branding 13">
-        <figcaption>United Express — 13</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-14.jpg" alt="United Express branding 14">
-        <figcaption>United Express — 14</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-15.jpg" alt="United Express branding 15">
-        <figcaption>United Express — 15</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/united-express/united-express-16.jpg" alt="United Express branding 16">
-        <figcaption>United Express — 16</figcaption>
-      </figure>
-
-    </div>
-  </section>
-
-
-  <!-- GARAGE -->
-
-  <section class="project">
-
-    <div class="project-head">
-
-      <span class="project-number">02</span>
-
-      <h2>Garage</h2>
-
-      <div class="project-meta">
-        Brand Identity<br>
-        Art Direction
-      </div>
-
-    </div>
-
-    <div class="gallery">
-
-      <figure>
-        <img src="images/branding/garage/garage-01.jpg" alt="Garage branding 01">
-        <figcaption>Garage — 01</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/garage/garage-02.jpg" alt="Garage branding 02">
-        <figcaption>Garage — 02</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/garage/garage-03.jpg" alt="Garage branding 03">
-        <figcaption>Garage — 03</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/garage/garage-04.jpg" alt="Garage branding 04">
-        <figcaption>Garage — 04</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/garage/garage-05.jpg" alt="Garage branding 05">
-        <figcaption>Garage — 05</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/garage/garage-06.jpg" alt="Garage branding 06">
-        <figcaption>Garage — 06</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/garage/garage-07.jpg" alt="Garage branding 07">
-        <figcaption>Garage — 07</figcaption>
-      </figure>
-
-    </div>
-  </section>
-
-
-  <!-- WINK CO -->
-
-  <section class="project">
-
-    <div class="project-head">
-
-      <span class="project-number">03</span>
-
-      <h2>Wink<br>Co.</h2>
-
-      <div class="project-meta">
-        Brand Identity<br>
-        Creative Direction
-      </div>
-
-    </div>
-
-    <div class="gallery">
-
-      <figure>
-        <img src="images/branding/wink-co/wink-co-01.jpg" alt="Wink Co branding 01">
-        <figcaption>Wink Co. — 01</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/wink-co/wink-co-02.jpg" alt="Wink Co branding 02">
-        <figcaption>Wink Co. — 02</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/wink-co/wink-co-03.jpg" alt="Wink Co branding 03">
-        <figcaption>Wink Co. — 03</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/wink-co/wink-co-04.jpg" alt="Wink Co branding 04">
-        <figcaption>Wink Co. — 04</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/wink-co/wink-co-05.jpg" alt="Wink Co branding 05">
-        <figcaption>Wink Co. — 05</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/wink-co/wink-co-06.jpg" alt="Wink Co branding 06">
-        <figcaption>Wink Co. — 06</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/wink-co/wink-co-07.jpg" alt="Wink Co branding 07">
-        <figcaption>Wink Co. — 07</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/branding/wink-co/wink-co-08.jpg" alt="Wink Co branding 08">
-        <figcaption>Wink Co. — 08</figcaption>
-      </figure>
-
-    </div>
-  </section>
-
-
-  <!-- END -->
-
-  <div class="end">
-    <a href="index.html">← Back to Selected Work</a>
-    <span>© 2026 Lana Othman · Graphic Designer</span>
+  <div class="section-no">
+    03 / SELECTED WORK · BRANDING
   </div>
+
+  <h1>
+    Branding
+  </h1>
+
+  <div class="intro-bottom">
+
+    <p>
+      Visual identities, brand systems<br>
+      and distinctive brand experiences.
+    </p>
+
+    <p>
+      <strong>03 Projects</strong><br>
+      Ramallah · Palestine
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     UNITED EXPRESS
+========================= -->
+
+<section class="project">
+
+  <div class="project-head">
+
+    <span class="project-number">
+      01
+    </span>
+
+    <h2>
+      United<br>
+      Express
+    </h2>
+
+    <div class="project-meta">
+      Brand Identity<br>
+      Visual System
+    </div>
+
+  </div>
+
+
+  <div class="gallery">
+
+    <figure>
+      <img src="images/branding/united-express/united-express-01.jpg" alt="United Express branding 01">
+      <figcaption>United Express — 01</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/united-express/united-express-02.jpg" alt="United Express branding 02">
+      <figcaption>United Express — 02</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/united-express/united-express-03.jpg" alt="United Express branding 03">
+      <figcaption>United Express — 03</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/united-express/united-express-04.jpg" alt="United Express branding 04">
+      <figcaption>United Express — 04</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/united-express/united-express-05.jpg" alt="United Express branding 05">
+      <figcaption>United Express — 05</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/united-express/united-express-06.jpg" alt="United Express branding 06">
+      <figcaption>United Express — 06</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/united-express/united-express-07.jpg" alt="United Express branding 07">
+      <figcaption>United Express — 07</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/united-express/united-express-08.jpg" alt="United Express branding 08">
+      <figcaption>United Express — 08</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/united-express/united-express-09.jpg" alt="United Express branding 09">
+      <figcaption>United Express — 09</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/united-express/united-express-10.jpg" alt="United Express branding 10">
+      <figcaption>United Express — 10</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/united-express/united-express-11.jpg" alt="United Express branding 11">
+      <figcaption>United Express — 11</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/united-express/united-express-12.jpg" alt="United Express branding 12">
+      <figcaption>United Express — 12</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/united-express/united-express-13.jpg" alt="United Express branding 13">
+      <figcaption>United Express — 13</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/united-express/united-express-14.jpg" alt="United Express branding 14">
+      <figcaption>United Express — 14</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/united-express/united-express-15.jpg" alt="United Express branding 15">
+      <figcaption>United Express — 15</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/united-express/united-express-16.jpg" alt="United Express branding 16">
+      <figcaption>United Express — 16</figcaption>
+    </figure>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     GARAGE
+========================= -->
+
+<section class="project">
+
+  <div class="project-head">
+
+    <span class="project-number">
+      02
+    </span>
+
+    <h2>
+      Garage
+    </h2>
+
+    <div class="project-meta">
+      Brand Identity<br>
+      Art Direction
+    </div>
+
+  </div>
+
+
+  <div class="gallery">
+
+    <figure>
+      <img src="images/branding/garage/garage-01.jpg" alt="Garage branding 01">
+      <figcaption>Garage — 01</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/garage/garage-02.jpg" alt="Garage branding 02">
+      <figcaption>Garage — 02</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/garage/garage-03.jpg" alt="Garage branding 03">
+      <figcaption>Garage — 03</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/garage/garage-04.jpg" alt="Garage branding 04">
+      <figcaption>Garage — 04</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/garage/garage-05.jpg" alt="Garage branding 05">
+      <figcaption>Garage — 05</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/garage/garage-06.jpg" alt="Garage branding 06">
+      <figcaption>Garage — 06</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/garage/garage-07.jpg" alt="Garage branding 07">
+      <figcaption>Garage — 07</figcaption>
+    </figure>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     WINK CO
+========================= -->
+
+<section class="project">
+
+  <div class="project-head">
+
+    <span class="project-number">
+      03
+    </span>
+
+    <h2>
+      Wink<br>
+      Co.
+    </h2>
+
+    <div class="project-meta">
+      Brand Identity<br>
+      Creative Direction
+    </div>
+
+  </div>
+
+
+  <div class="gallery">
+
+    <figure>
+      <img src="images/branding/wink-co/wink-co-01.jpg" alt="Wink Co branding 01">
+      <figcaption>Wink Co. — 01</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/wink-co/wink-co-02.jpg" alt="Wink Co branding 02">
+      <figcaption>Wink Co. — 02</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/wink-co/wink-co-03.jpg" alt="Wink Co branding 03">
+      <figcaption>Wink Co. — 03</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/wink-co/wink-co-04.jpg" alt="Wink Co branding 04">
+      <figcaption>Wink Co. — 04</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/wink-co/wink-co-05.jpg" alt="Wink Co branding 05">
+      <figcaption>Wink Co. — 05</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/wink-co/wink-co-06.jpg" alt="Wink Co branding 06">
+      <figcaption>Wink Co. — 06</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/wink-co/wink-co-07.jpg" alt="Wink Co branding 07">
+      <figcaption>Wink Co. — 07</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/branding/wink-co/wink-co-08.jpg" alt="Wink Co branding 08">
+      <figcaption>Wink Co. — 08</figcaption>
+    </figure>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     END
+========================= -->
+
+<div class="end">
+
+  <a href="index.html">
+    ← Back to Selected Work
+  </a>
+
+  <span>
+    © 2026 Lana Othman · Graphic Designer
+  </span>
+
+</div>
+
 
 </main>
 
 </body>
 </html>
+```
