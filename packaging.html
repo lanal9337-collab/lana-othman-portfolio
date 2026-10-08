@@ -200,6 +200,531 @@
       background:#050505;
     }
 
+    /* NORMAL BRIGHT IMAGES */
+
+    figure img{
+      position:relative;
+      z-index:1;
+      display:block;
+      width:100%;
+      height:auto;
+      filter:none;
+      transform:scale(1.001);
+      transition:
+        transform .9s cubic-bezier(.2,.7,.2,1);
+    }
+
+    figure:hover img{
+      transform:scale(1.035);
+    }
+
+    figcaption{
+      position:absolute;
+      z-index:3;
+      left:18px;
+      bottom:16px;
+      color:#d0d0ca;
+      font-size:9px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      opacity:.7;
+      transition:.4s ease;
+    }
+
+    figure:hover figcaption{
+      color:var(--lime);
+      opacity:1;
+    }
+
+    /* FIRST IMAGE OF EACH PROJECT */
+
+    .project:first-of-type .gallery figure:first-child,
+    .project:nth-of-type(2) .gallery figure:first-child,
+    .project:nth-of-type(3) .gallery figure:first-child{
+      grid-column:1 / -1;
+    }
+
+    /* FOOTER */
+
+    .project-footer{
+      margin-top:40px;
+      padding:25px var(--pad);
+      border-top:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      color:var(--muted);
+      font-size:9px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+
+    .project-footer a{
+      transition:.25s ease;
+    }
+
+    .project-footer a:hover{
+      color:var(--lime);
+    }
+
+    /* MOBILE */
+
+    @media(max-width:800px){
+
+      .project-nav{
+        height:68px;
+      }
+
+      .sub{
+        padding:120px 20px 0;
+      }
+
+      .intro-top{
+        padding-bottom:14px;
+      }
+
+      .project-intro{
+        padding:50px 0 80px;
+      }
+
+      h1{
+        font-size:24vw;
+      }
+
+      .intro-description{
+        margin:45px 0 0;
+        font-size:14px;
+      }
+
+      .project{
+        margin-bottom:100px;
+      }
+
+      .project-head{
+        display:block;
+        margin-bottom:20px;
+      }
+
+      h2{
+        margin-top:12px;
+        font-size:15vw;
+      }
+
+      .project-count{
+        margin-top:15px;
+      }
+
+      .gallery{
+        grid-template-columns:1fr;
+        gap:12px;
+      }
+
+      .project:first-of-type .gallery figure:first-child,
+      .project:nth-of-type(2) .gallery figure:first-child,
+      .project:nth-of-type(3) .gallery figure:first-child{
+        grid-column:auto;
+      }
+
+      figure img{
+        filter:none;
+      }
+
+      .project-footer{
+        padding:20px;
+        display:block;
+        line-height:2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+
+  <header class="project-nav">
+
+    <a class="logo" href="index.html">
+      LO<span>©</span>
+    </a>
+
+    <a class="back" href="index.html">
+      ← Back to Work
+    </a>
+
+  </header>
+
+
+  <!-- MAIN -->
+
+  <main class="sub">
+
+    <div class="intro-top">
+      <span class="section-no">03 / PACKAGING</span>
+      <span class="year">2026</span>
+    </div>
+
+
+    <div class="project-intro">
+
+      <span class="project-number">SELECTED WORK / 03</span>
+
+      <h1>
+        Pack<span>aging</span>
+      </h1>
+
+      <p class="intro-description">
+        A selection of packaging and product presentation projects,
+        developed through visual systems, composition and print-focused design.
+      </p>
+
+    </div>
+
+
+    <!-- BEAUTY TOUCH -->
+
+    <section class="project">
+
+      <div class="project-head">
+
+        <div>
+          <span class="project-index">01 / 03</span>
+          <h2>Beauty Touch</h2>
+        </div>
+
+        <span class="project-count">
+          05 Works
+        </span>
+
+      </div>
+
+
+      <div class="gallery">
+
+        <figure>
+          <img src="images/packaging/beauty-touch/beauty-touch-01.jpg" alt="Beauty Touch packaging 01">
+          <figcaption>Beauty Touch — 01</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/packaging/beauty-touch/beauty-touch-02.jpg" alt="Beauty Touch packaging 02">
+          <figcaption>Beauty Touch — 02</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/packaging/beauty-touch/beauty-touch-03.jpg" alt="Beauty Touch packaging 03">
+          <figcaption>Beauty Touch — 03</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/packaging/beauty-touch/beauty-touch-04.jpg" alt="Beauty Touch packaging 04">
+          <figcaption>Beauty Touch — 04</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/packaging/beauty-touch/beauty-touch-05.jpg" alt="Beauty Touch packaging 05">
+          <figcaption>Beauty Touch — 05</figcaption>
+        </figure>
+
+      </div>
+
+    </section>
+
+
+    <!-- LITTLES CLOTHES -->
+
+    <section class="project">
+
+      <div class="project-head">
+
+        <div>
+          <span class="project-index">02 / 03</span>
+          <h2>Littles Clothes</h2>
+        </div>
+
+        <span class="project-count">
+          04 Works
+        </span>
+
+      </div>
+
+
+      <div class="gallery">
+
+        <figure>
+          <img src="images/packaging/littles-clothes/littles-clothes-01.jpg" alt="Littles Clothes packaging 01">
+          <figcaption>Littles Clothes — 01</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/packaging/littles-clothes/littles-clothes-02.jpg" alt="Littles Clothes packaging 02">
+          <figcaption>Littles Clothes — 02</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/packaging/littles-clothes/littles-clothes-03.jpg" alt="Littles Clothes packaging 03">
+          <figcaption>Littles Clothes — 03</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/packaging/littles-clothes/littles-clothes-04.jpg" alt="Littles Clothes packaging 04">
+          <figcaption>Littles Clothes — 04</figcaption>
+        </figure>
+
+      </div>
+
+    </section>
+
+
+    <!-- MALMAS -->
+
+    <section class="project">
+
+      <div class="project-head">
+
+        <div>
+          <span class="project-index">03 / 03</span>
+          <h2>Malmas</h2>
+        </div>
+
+        <span class="project-count">
+          09 Works
+        </span>
+
+      </div>
+
+
+      <div class="gallery">
+
+        <figure>
+          <img src="images/packaging/malmas/malmas-01.jpg" alt="Malmas packaging 01">
+          <figcaption>Malmas — 01</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/packaging/malmas/malmas-02.jpg" alt="Malmas packaging 02">
+          <figcaption>Malmas — 02</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/packaging/malmas/malmas-03.jpg" alt="Malmas packaging 03">
+          <figcaption>Malmas — 03</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/packaging/malmas/malmas-04.jpg" alt="Malmas packaging 04">
+          <figcaption>Malmas — 04</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/packaging/malmas/malmas-05.jpg" alt="Malmas packaging 05">
+          <figcaption>Malmas — 05</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/packaging/malmas/malmas-06.jpg" alt="Malmas packaging 06">
+          <figcaption>Malmas — 06</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/packaging/malmas/malmas-07.jpg" alt="Malmas packaging 07">
+          <figcaption>Malmas — 07</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/packaging/malmas/malmas-08.jpg" alt="Malmas packaging 08">
+          <figcaption>Malmas — 08</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/packaging/malmas/malmas-09.jpg" alt="Malmas packaging 09">
+          <figcaption>Malmas — 09</figcaption>
+        </figure>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="project-footer">
+
+    <span>© 2026 Lana Othman</span>
+
+    <a href="index.html">
+      Back to Work ↗
+    </a>
+
+  </footer>
+
+</body>
+</html>      font-family:Acumin,Inter,Arial,sans-serif;
+      overflow-x:hidden;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    /* NAV */
+
+    .project-nav{
+      position:fixed;
+      z-index:20;
+      top:0;
+      left:0;
+      right:0;
+      height:76px;
+      padding:0 var(--pad);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      background:rgba(3,3,3,.94);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .logo{
+      font-size:22px;
+      font-weight:900;
+      letter-spacing:-.08em;
+    }
+
+    .logo span{
+      color:var(--lime);
+      font-size:8px;
+      margin-left:3px;
+    }
+
+    .back{
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      color:#aaa;
+      transition:.25s ease;
+    }
+
+    .back:hover{
+      color:var(--lime);
+    }
+
+    /* INTRO */
+
+    .sub{
+      max-width:1500px;
+      margin:0 auto;
+      padding:150px var(--pad) 0;
+    }
+
+    .intro-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      border-bottom:1px solid var(--line);
+      padding-bottom:18px;
+    }
+
+    .section-no{
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.17em;
+      color:var(--lime);
+    }
+
+    .year{
+      font-size:10px;
+      letter-spacing:.16em;
+      color:var(--muted);
+    }
+
+    .project-intro{
+      padding:65px 0 110px;
+    }
+
+    .project-number{
+      display:block;
+      margin-bottom:18px;
+      color:var(--lime);
+      opacity:.65;
+      font-size:10px;
+      letter-spacing:.16em;
+    }
+
+    h1{
+      font-size:clamp(80px,15vw,220px);
+      line-height:.72;
+      letter-spacing:-.085em;
+      font-weight:850;
+      margin:0;
+    }
+
+    h1 i{
+      font-style:normal;
+      font-weight:250;
+    }
+
+    .intro-description{
+      max-width:390px;
+      margin:65px 0 0 auto;
+      color:#777772;
+      font-size:15px;
+      line-height:1.35;
+    }
+
+    /* PROJECT */
+
+    .project{
+      margin:0 0 150px;
+    }
+
+    .project-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      border-top:1px solid var(--line);
+      padding-top:18px;
+      margin-bottom:30px;
+    }
+
+    .project-index{
+      font-size:10px;
+      letter-spacing:.16em;
+      color:var(--lime);
+    }
+
+    h2{
+      font-size:clamp(42px,6vw,86px);
+      line-height:.82;
+      letter-spacing:-.065em;
+      font-weight:700;
+      margin:0;
+    }
+
+    .project-count{
+      color:var(--muted);
+      font-size:10px;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+    }
+
+    /* GALLERY */
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+
+    figure{
+      position:relative;
+      margin:0;
+      overflow:hidden;
+      background:#050505;
+    }
+
     figure::after{
       content:"";
       position:absolute;
